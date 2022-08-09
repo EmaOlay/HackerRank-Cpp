@@ -44,7 +44,15 @@ class Box{
         int getLength(){return l;};
         int getBreadth (){return b;};
         int getHeight (){return h;};
-        long CalculateVolume(){return long(l*b*h);};
+        long CalculateVolume(){
+            long aux=0;
+            // cout<<"l="<<l<<endl;
+            // cout<<"l*b="<<l*b<<endl;
+            // cout<<"l*b*h="<<l*b*h<<endl;
+            aux=l*b;
+            aux=aux*h;
+            return aux;
+            };
         bool operator<(Box& instance){
             if (l<instance.l) {
                 return true;
